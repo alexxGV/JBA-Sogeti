@@ -5,17 +5,21 @@ import { AppComponent } from './app.component';
 import { ListaUsersComponent } from './components/lista-users/lista-users.component';
 import { HttpClientModule } from '@angular/common/http';
 import { Autenticacion } from './services/autenticacion.service';
+import { MenuComponent } from './components/menu/menu.component';
+import { UserService } from './services/user.service';
+import { JobsService } from './services/jobs.service';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ListaUsersComponent
+    ListaUsersComponent,
+    MenuComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule
   ],
-  providers: [Autenticacion],
+  providers: [Autenticacion,UserService,JobsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

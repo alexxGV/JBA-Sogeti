@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { routing, appRoutingProvider } from './app.routing';
 
 import { AppComponent } from './app.component';
 import { ListaUsersComponent } from './components/lista-users/lista-users.component';
@@ -13,9 +14,10 @@ import { Autenticacion } from './services/autenticacion.service';
   ],
   imports: [
     BrowserModule,
-    HttpClientModule
+    HttpClientModule,
+    routing
   ],
-  providers: [Autenticacion],
+  providers: [appRoutingProvider, Autenticacion],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

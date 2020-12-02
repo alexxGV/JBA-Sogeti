@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "JBA-Sogeti"
+    }
+  },
+  "defaultProject": "JBA-Sogeti",
+  "cli": {
+    "analytics": false
+  }
 }
